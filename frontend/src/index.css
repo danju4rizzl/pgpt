@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Deejay's default CSS */
+:root {
+	--color-primary: #4e3b54;
+	--color-secondary: #15202b;
+	--color-white: #ffffff;
+	--color-black: #192734;
+	--color-gray: rgb(244, 244, 244);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-weight: 400;
+	font-size: 62.5%;
+	line-height: 1.7;
+	font-family: "Poppins", sans-serif;
+	background-color: var(--color-black);
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	text-align: center;
+}
+
+.main {
+	color: var(--color-white);
+	padding: 5rem 6rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.main form {
+	display: flex;
+	padding: 0 5rem;
+}
+
+.main form input,
+.main form button {
+	padding: 1.1rem;
+	border: none;
+}
+
+.main form input {
+	outline: none;
+	background-color: var(--color-gray);
+	font-size: 1.2rem;
+	border-radius: 15px 0px 0px 15px;
+	flex: 1;
+}
+
+.main form button {
+	flex-basis: 8rem;
+	border-radius: 0px 15px 15px 0px;
+	font-size: 0.8rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: var(--color-secondary);
+	color: var(--color-white);
+}
+
+.main form button:hover {
+	background-color: var(--color-primary);
+	color: var(--color-gray);
+}
+
+.log ul {
+	padding: 2rem 6rem;
+	font-size: 1.3rem;
+}
+
+.log li {
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	margin: 0.5rem auto;
+}
+
+.log span {
+	font-weight: lighter;
+	padding: 1.3rem 1rem;
+	margin-top: 0.5rem;
+	border-radius: 15px;
+	max-width: 80%;
+	min-width: 10%;
+}
+
+.log li:nth-child(odd) {
+	text-align: right;
+	align-items: flex-end;
+}
+
+/* User Requests */
+.log li:nth-child(odd) span {
+	background: var(--color-primary);
+}
+
+/* Ai Responses */
+.log li:nth-child(even) span {
+	background: var(--color-secondary);
+	color: var(--color-gray);
+}
+
+/* From tablet => mobile screen styles*/
+@media screen and (max-width: 700px) {
+	h1 {
+		text-align: center;
+	}
+
+	.main {
+		padding: 3rem 1rem;
+	}
+
+	.main form {
+		padding: 0;
+	}
+
+	.log ul {
+		padding: 1rem;
+	}
+}
