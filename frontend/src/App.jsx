@@ -12,7 +12,7 @@ function App() {
 		const message = { role: "user", content: userValue }
 
 		try {
-			const response = await fetch("http://localhost:8000/api", {
+			const response = await fetch("https://pgpt-api.onrender.com/api", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
